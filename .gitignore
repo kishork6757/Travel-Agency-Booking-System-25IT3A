@@ -1,0 +1,14 @@
+# Virtual Environment
+.venv/
+__pycache__/
+*.pyc
+
+# IDE Configuration
+.idea/
+.vscode/
+*.iml
+
+# OS files
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/

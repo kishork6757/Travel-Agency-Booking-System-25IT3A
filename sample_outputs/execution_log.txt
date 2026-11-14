@@ -1,0 +1,134 @@
+﻿
+[36m[1m==========================================================================================[0m
+[36m[1m   TRAVEL AGENCY BOOKING & TOURISM TREND ANALYSIS SYSTEM[0m
+[36m[1m==========================================================================================[0m
+[37mStudent: Kishor K | Reg No: 732925ITR051 | Class: 25IT3A | Scenario 21[0m
+------------------------------------------------------------------------------------------
+[33m[CUSTOMER MANAGEMENT][0m
+  1. Register New Customer Profile
+  2. View All Registered Customers
+[33m[PACKAGE CATALOG & INVENTORY][0m
+  3. View All Travel Packages
+  4. Add New Travel Package
+  5. Check Live Seat Availability & Remaining Capacity
+[33m[BOOKING & CANCELLATION OPERATIONS][0m
+  6. Book Travel Package (with Capacity Verification & Anti-Overbooking)
+  7. View All Bookings Log
+  8. Cancel Booking (Automatic Capacity Release & 90% Refund)
+[33m[FINANCES & REPORTS][0m
+  9. View All Payment Records
+ 10. Destination Popularity, Occupancy & Revenue Performance Report
+ 11. Recent Transactions & Operational Summary
+[33m[TOURISM TREND ANALYTICS][0m
+ 12. Run Python Data Preprocessing & Generate Visualizations
+[31m  0. Exit System[0m
+------------------------------------------------------------------------------------------
+[36mEnter your choice (1 - 12, or 0 to Exit): [0m[33m[1m--- Book Travel Package (Anti-Overbooking Protected) ---[0m
+Enter Customer ID: Enter Package ID: Enter Travel Date (YYYY-MM-DD): Enter Number of Travelers: Payment Method (UPI / Credit Card / Debit Card / Net Banking / Cash): [31m[1m[ERROR] [OVERBOOKING BLOCKED] Booking Rejected: Requested 15 seats, but only 10 seats are available for 'Dubai Desert & City Lights' (Capacity: 15).[0m
+
+Press [ENTER] to return to the Main Menu...
+
+[36m[1m==========================================================================================[0m
+[36m[1m   TRAVEL AGENCY BOOKING & TOURISM TREND ANALYSIS SYSTEM[0m
+[36m[1m==========================================================================================[0m
+[37mStudent: Kishor K | Reg No: 732925ITR051 | Class: 25IT3A | Scenario 21[0m
+------------------------------------------------------------------------------------------
+[33m[CUSTOMER MANAGEMENT][0m
+  1. Register New Customer Profile
+  2. View All Registered Customers
+[33m[PACKAGE CATALOG & INVENTORY][0m
+  3. View All Travel Packages
+  4. Add New Travel Package
+  5. Check Live Seat Availability & Remaining Capacity
+[33m[BOOKING & CANCELLATION OPERATIONS][0m
+  6. Book Travel Package (with Capacity Verification & Anti-Overbooking)
+  7. View All Bookings Log
+  8. Cancel Booking (Automatic Capacity Release & 90% Refund)
+[33m[FINANCES & REPORTS][0m
+  9. View All Payment Records
+ 10. Destination Popularity, Occupancy & Revenue Performance Report
+ 11. Recent Transactions & Operational Summary
+[33m[TOURISM TREND ANALYTICS][0m
+ 12. Run Python Data Preprocessing & Generate Visualizations
+[31m  0. Exit System[0m
+------------------------------------------------------------------------------------------
+[36mEnter your choice (1 - 12, or 0 to Exit): [0m[33m[1m--- Book Travel Package (Anti-Overbooking Protected) ---[0m
+Enter Customer ID: Enter Package ID: Enter Travel Date (YYYY-MM-DD): Enter Number of Travelers: Payment Method (UPI / Credit Card / Debit Card / Net Banking / Cash): [32m[1m[SUCCESS] BOOKING CONFIRMED![0m
+  Booking Reference ID : 228
+  Customer Name        : Kishor Kumar
+  Destination          : Dubai Desert & City Lights
+  Travel Date          : 2026-12-15
+  Travelers Headcount  : 2
+  Total Invoice Amount : Rs. 96,000.00
+  Payment Status       : PAID (UPI)
+
+Press [ENTER] to return to the Main Menu...
+
+[36m[1m==========================================================================================[0m
+[36m[1m   TRAVEL AGENCY BOOKING & TOURISM TREND ANALYSIS SYSTEM[0m
+[36m[1m==========================================================================================[0m
+[37mStudent: Kishor K | Reg No: 732925ITR051 | Class: 25IT3A | Scenario 21[0m
+------------------------------------------------------------------------------------------
+[33m[CUSTOMER MANAGEMENT][0m
+  1. Register New Customer Profile
+  2. View All Registered Customers
+[33m[PACKAGE CATALOG & INVENTORY][0m
+  3. View All Travel Packages
+  4. Add New Travel Package
+  5. Check Live Seat Availability & Remaining Capacity
+[33m[BOOKING & CANCELLATION OPERATIONS][0m
+  6. Book Travel Package (with Capacity Verification & Anti-Overbooking)
+  7. View All Bookings Log
+  8. Cancel Booking (Automatic Capacity Release & 90% Refund)
+[33m[FINANCES & REPORTS][0m
+  9. View All Payment Records
+ 10. Destination Popularity, Occupancy & Revenue Performance Report
+ 11. Recent Transactions & Operational Summary
+[33m[TOURISM TREND ANALYTICS][0m
+ 12. Run Python Data Preprocessing & Generate Visualizations
+[31m  0. Exit System[0m
+------------------------------------------------------------------------------------------
+[36mEnter your choice (1 - 12, or 0 to Exit): [0m
+[36m[1m==========================================================================================[0m
+[36m[1m   DESTINATION POPULARITY & REVENUE PERFORMANCE REPORT[0m
+[36m[1m==========================================================================================[0m
+ID    | Destination                    | Category      | Capacity | Booked  | Remaining | Occupancy %  | Total Revenue 
+------------------------------------------------------------------------------------------
+105   | Dubai Desert & City Lights     | International |       15 |       7 |         8 |        46.7% | Rs.   336000.00
+108   | Thailand Island Extravaganza   | International |       20 |       4 |        16 |        20.0% | Rs.   144000.00
+102   | Goa Sun & Sand Gateway         | Domestic      |       30 |      10 |        20 |        33.3% | Rs.   110000.00
+107   | Andaman Island Coral Explorer  | Adventure     |       16 |       3 |        13 |        18.8% | Rs.    87000.00
+104   | Kashmir Paradise Odyssey       | Domestic      |       18 |       2 |        16 |        11.1% | Rs.    48000.00
+101   | Manali & Kasol Alpine Tour     | Adventure     |       25 |       0 |        25 |         0.0% | Rs.        0.00
+103   | Kerala Backwaters & Munnar     | Luxury        |       20 |       0 |        20 |         0.0% | Rs.        0.00
+106   | Varanasi & Ayodhya Heritage    | Pilgrimage    |       28 |       0 |        28 |         0.0% | Rs.        0.00
+------------------------------------------------------------------------------------------
+[1mTOTAL | All Operational Destinations   | -             |        - |      26 |         - |            - | Rs.   725000.00
+[0m
+Press [ENTER] to return to the Main Menu...
+
+[36m[1m==========================================================================================[0m
+[36m[1m   TRAVEL AGENCY BOOKING & TOURISM TREND ANALYSIS SYSTEM[0m
+[36m[1m==========================================================================================[0m
+[37mStudent: Kishor K | Reg No: 732925ITR051 | Class: 25IT3A | Scenario 21[0m
+------------------------------------------------------------------------------------------
+[33m[CUSTOMER MANAGEMENT][0m
+  1. Register New Customer Profile
+  2. View All Registered Customers
+[33m[PACKAGE CATALOG & INVENTORY][0m
+  3. View All Travel Packages
+  4. Add New Travel Package
+  5. Check Live Seat Availability & Remaining Capacity
+[33m[BOOKING & CANCELLATION OPERATIONS][0m
+  6. Book Travel Package (with Capacity Verification & Anti-Overbooking)
+  7. View All Bookings Log
+  8. Cancel Booking (Automatic Capacity Release & 90% Refund)
+[33m[FINANCES & REPORTS][0m
+  9. View All Payment Records
+ 10. Destination Popularity, Occupancy & Revenue Performance Report
+ 11. Recent Transactions & Operational Summary
+[33m[TOURISM TREND ANALYTICS][0m
+ 12. Run Python Data Preprocessing & Generate Visualizations
+[31m  0. Exit System[0m
+------------------------------------------------------------------------------------------
+[36mEnter your choice (1 - 12, or 0 to Exit): [0m[32m[1m[SUCCESS] Thank you for using the Travel Agency Management System. Goodbye![0m
