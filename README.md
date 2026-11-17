@@ -5,6 +5,13 @@
 
 ---
 
+## 🌐 24/7 Live Interactive Web Application
+* **Live Web App:** Deployable on Streamlit Community Cloud (100% Free, 24/7 Active)
+* **Local Web Launch:** Run `run_website.bat` or `streamlit run app.py`
+* **Features:** Live package catalog, interactive booking with dynamic anti-overbooking capacity verification, cancellations with 90% refund processing, and live interactive Plotly tourism analytics dashboards!
+
+---
+
 ## 📌 Student Details
 * **Student Name:** Kishor K
 * **Register Number:** 732925ITR051
@@ -94,7 +101,30 @@ Ensure you have the following installed on your workstation:
 
 ---
 
-### 2. Running the Java Application
+### 2. Running the Interactive Web Application
+
+#### Option A: 1-Click Launch (Windows)
+Double-click `run_website.bat` in the project root directory.
+
+#### Option B: Command Line (PowerShell / Terminal)
+```powershell
+pip install -r requirements.txt
+streamlit run app.py
+```
+*The app will automatically launch in your default web browser at `http://localhost:8501`.*
+
+---
+
+### 3. Deploying 24/7 Free Live Website (Streamlit Community Cloud)
+1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with your GitHub account (`kishork6757`).
+2. Click **Create app** -> **I already have an app**.
+3. Select your repository: `kishork6757/Travel-Agency-Booking-System-25IT3A`.
+4. Set Main file path: `app.py`.
+5. Click **Deploy!** — Within 60 seconds, your site is live with a permanent, shareable 24/7 public URL (e.g. `https://travel-agency-25it3a.streamlit.app`).
+
+---
+
+### 4. Running the Java Application
 
 #### Option A: 1-Click Batch Execution (Windows)
 Double-click `run_java.bat` in the project root folder.
