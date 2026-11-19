@@ -103,15 +103,23 @@ Ensure you have the following installed on your workstation:
 
 ### 2. Running the Interactive Web Application
 
-#### Option A: 1-Click Launch (Windows)
-Double-click `run_website.bat` in the project root directory.
+You have two professional interfaces available:
 
-#### Option B: Command Line (PowerShell / Terminal)
-```powershell
-pip install -r requirements.txt
-streamlit run app.py
-```
-*The app will automatically launch in your default web browser at `http://localhost:8501`.*
+#### A. Modern Full-Stack Web Portal (Flask + Tailwind CSS + Chart.js)
+* **1-Click Launch (Windows):** Double-click `run_fullstack.bat`
+* **Command Line:**
+  ```powershell
+  python server.py
+  ```
+  *Opens automatically at `http://127.0.0.1:5000` with consumer-facing UI, booking modal, digital boarding passes, and REST APIs.*
+
+#### B. Cloud-Ready Web Application (Streamlit + Plotly)
+* **1-Click Launch (Windows):** Double-click `run_website.bat`
+* **Command Line:**
+  ```powershell
+  streamlit run app.py
+  ```
+  *Opens automatically at `http://localhost:8501`.*
 
 ---
 
