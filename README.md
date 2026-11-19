@@ -1,232 +1,180 @@
-# Travel Agency Booking and Tourism Trend Analysis System
-### Integrated Academic Project-Based Assessment (ODD Semester 2026 - 2027)
-**Department of Information Technology**  
-**Velalar College of Engineering and Technology, Erode - 12**
+# ✈️ Travel Agency Booking and Tourism Trend Analysis System
+### Project-Based Assessment Activity (Academic Year 2026 - 2027)
+**Department of Information Technology** | **Velalar College of Engineering and Technology, Erode - 12**
 
 ---
 
-## 🌐 24/7 Live Interactive Web Application
-* **Live Web App:** Deployable on Streamlit Community Cloud (100% Free, 24/7 Active)
-* **Local Web Launch:** Run `run_website.bat` or `streamlit run app.py`
-* **Features:** Live package catalog, interactive booking with dynamic anti-overbooking capacity verification, cancellations with 90% refund processing, and live interactive Plotly tourism analytics dashboards!
+## 📌 Student & Academic Details
 
----
-
-## 📌 Student Details
-* **Student Name:** Kishor K
-* **Register Number:** 732925ITR051
-* **Class & Section:** 25IT3A
-* **Assigned Scenario:** **Scenario 21: Travel Agency Booking and Tourism Trend Analysis System** *(Register Nos: 21, 51, 81, 111)*
-
----
-
-## 📖 Project Overview
-
-The **Travel Agency Booking and Tourism Trend Analysis System** is an end-to-end software solution developed to automate travel desk operations, enforce strict inventory control, prevent overbooking, and unlock strategic business intelligence from historical tourism records.
-
-Manual record-keeping in tourism operations commonly suffers from double-booking, overbooking beyond coach/flight limits, sluggish revenue reporting, and an inability to detect seasonal spikes. This project resolves these issues through a high-performance 3-tier architecture:
-1. **Interactive Object-Oriented Java CLI Engine:** Enforces business logic, customer profile handling, traveler headcount verification, and real-time anti-overbooking safeguards.
-2. **Relational Database Management System (3NF Normalized):** Robust schema in SQLite and MySQL with atomic transactions, referential integrity constraints, and automated database views.
-3. **Python Tourism Analytics & Visualization Dashboard:** Preprocesses operational data using NumPy and Pandas to discover seasonal patterns, destination popularity, and traveler group behaviors through high-resolution Seaborn and Matplotlib visualizations.
-
----
-
-## 🛠️ Technology Stack
-
-| Domain | Technologies & Libraries |
+| Attribute | Details |
 | :--- | :--- |
-| **Programming Language** | Java (JDK 17 / 21+) |
-| **Object-Oriented Design** | Encapsulation, Inheritance, Interfaces, Custom Exceptions, Generics, Collections Framework, Streams API |
-| **Persistence / RDBMS** | SQLite 3 (Default zero-config embedded) / MySQL 8.0+ |
-| **Database Connectivity** | Standard JDBC (`java.sql.*`), PreparedStatements, Transactions (Commit/Rollback) |
-| **Data Analytics** | Python 3.10+, NumPy, Pandas |
-| **Data Visualization** | Matplotlib, Seaborn, Jupyter Notebook (`.ipynb`) |
-| **Software Engineering** | Software Requirements Specification (SRS), UML Use Case, Class, Sequence Diagrams, Testing Matrix |
+| **Student Name** | **Kishor K** |
+| **Register Number** | **732925ITR051** *(Roll No: 51)* |
+| **Class & Section** | **25IT3A** |
+| **Degree & Branch** | B.Tech - Information Technology |
+| **Assigned Scenario** | **Scenario 21: Travel Agency Booking and Tourism Trend Analysis System** |
+| **Target Register Nos** | 21, 51, 81, 111 |
+| **GitHub Repository** | [github.com/kishork6757/Travel-Agency-Booking-System-25IT3A](https://github.com/kishork6757/Travel-Agency-Booking-System-25IT3A) |
 
 ---
 
-## 📂 Project Repository Structure
+## 🌐 Live Web Application & Deployment
 
-```text
-Assingment_Kishor/
-├── docs/                                # Software Engineering Deliverables (25ITT33)
-│   ├── SRS.md                           # Software Requirements Specification (COCOMO, LOC, Requirements)
-│   ├── DESIGN.md                        # Architecture, UML Use Case, Class & Sequence Diagrams (Mermaid)
-│   └── TESTING.md                       # Test Strategy, BVA, ECP, and 15 Executed Test Cases Table
-├── database/                            # Database Management Systems Deliverables (25ITT31)
-│   ├── ER_DIAGRAM.md                    # Entity-Relationship Diagram and Relational Model Spec
-│   ├── NORMALIZATION.md                 # 1NF, 2NF, 3NF, BCNF Step-by-Step Derivation
-│   ├── schema_sqlite.sql                # SQLite DDL Schema (Tables, Views, Triggers, Indexes)
-│   ├── schema_mysql.sql                 # MySQL DDL Schema (Tables, Views, Stored Procedures)
-│   ├── seed_data.sql                    # Realistic Seed Records (12 Customers, 8 Packages, 27 Bookings)
-│   └── travel_agency.db                 # Active SQLite Database File
-├── src/com/travel/                      # Java Source Code (25ITT32)
-│   ├── model/                           # Domain Entities (Customer, TravelPackage, Booking, Payment, Cancellation)
-│   ├── dao/                             # Data Access Objects (DBConnection, CustomerDAO, PackageDAO, BookingDAO, PaymentDAO, ReportDAO)
-│   ├── service/                         # Business Logic & Anti-Overbooking Engine (BookingService, CustomerService, PackageService, ReportService)
-│   ├── exception/                       # Custom Exceptions (CapacityExceededException, BookingNotFoundException, InvalidInputException)
-│   ├── util/                            # Console Table Formatter & DB Auto-Initializer
-│   └── Main.java                        # Interactive Menu-Driven Console Application Entrypoint
-├── analytics/                           # Foundations of Data Science (25ITC31)
-│   ├── requirements.txt                 # Python Dependencies
-│   ├── tourism_trend_analysis.py        # Automated Data Preprocessing & Plotting Script
-│   └── tourism_trend_analysis.ipynb     # Interactive Jupyter Notebook with Narrative Explanations
-├── visualizations/                      # High-Resolution Exported Analytics Charts
-│   ├── 01_destination_popularity.png    # Horizontal Bar Chart of Destination Headcounts
-│   ├── 02_monthly_booking_trends.png    # Seasonal Monthly Demand Curve
-│   ├── 03_revenue_by_category.png       # Donut Chart of Revenue Share
-│   ├── 04_booking_status_distribution.png # Bar Chart of Booking Outcomes (Confirmed vs Cancelled)
-│   ├── 05_traveler_group_size_distribution.png # Histogram & KDE of Party Sizes
-│   └── 06_package_occupancy_heatmap.png # Correlation Heatmap of Package Metrics
-├── lib/                                 # Runtime Dependencies
-│   ├── sqlite-jdbc.jar                  # SQLite JDBC Driver
-│   ├── slf4j-api.jar                    # Logging API
-│   └── slf4j-simple.jar                 # Logging Implementation
-├── sample_outputs/                      # Verified Execution Logs
-│   └── execution_log.txt                # Sample CLI Run & Overbooking Block Proof
-├── run_java.bat                         # 1-Click Windows Batch Script to Compile & Run Java App
-├── run_python.bat                       # 1-Click Windows Batch Script to Run Python Analytics
-└── README.md                            # Master Project Documentation
-```
+* **24/7 Live Cloud App:** [Travel Agency Portal on Streamlit Cloud](https://share.streamlit.io) *(Deployable with 1-click via `app.py`)*
+* **Full-Stack REST Web Portal:** Run [`run_fullstack.bat`](run_fullstack.bat) \(\rightarrow\) `http://127.0.0.1:5000` *(Tailwind CSS + Flask + Chart.js)*
+* **Interactive Cloud Portal:** Run [`run_website.bat`](run_website.bat) \(\rightarrow\) `http://localhost:8501` *(Streamlit + Plotly)*
+* **Java Console CLI Engine:** Run [`run_java.bat`](run_java.bat) *(Pure Java OOP + JDBC)*
 
 ---
 
-## ⚙️ Setup and Execution Instructions
+## 📖 Scenario 21 - Problem Statement & Core Capabilities
 
-### 1. Prerequisites
-Ensure you have the following installed on your workstation:
-* **Java Development Kit (JDK 17 or higher):** Run `javac -version` and `java -version`
-* **Python (Version 3.10 or higher):** Run `python --version`
-* **Git:** For cloning and GitHub submission
+A travel agency manages customer records, tour destinations, packages, reservations, and financial settlements. Manual record keeping causes overbooking beyond coach/flight capacities, seat inventory discrepancies, and difficulty identifying peak tourist seasons. 
 
----
+This system resolves these issues through an integrated, multi-tier software architecture:
 
-### 2. Running the Interactive Web Application
-
-You have two professional interfaces available:
-
-#### A. Modern Full-Stack Web Portal (Flask + Tailwind CSS + Chart.js)
-* **1-Click Launch (Windows):** Double-click `run_fullstack.bat`
-* **Command Line:**
-  ```powershell
-  python server.py
-  ```
-  *Opens automatically at `http://127.0.0.1:5000` with consumer-facing UI, booking modal, digital boarding passes, and REST APIs.*
-
-#### B. Cloud-Ready Web Application (Streamlit + Plotly)
-* **1-Click Launch (Windows):** Double-click `run_website.bat`
-* **Command Line:**
-  ```powershell
-  streamlit run app.py
-  ```
-  *Opens automatically at `http://localhost:8501`.*
+1. **Anti-Overbooking Capacity Guard:** Dynamically calculates `remaining_seats = max_capacity - total_confirmed_guests`. Any booking attempt exceeding available capacity is immediately blocked by Java service rules and database triggers (`trg_prevent_overbooking`).
+2. **Automated Cancellation & 90% Refund Policy:** Allows reservations to be cancelled with an automatic 10% processing fee deduction, instantly crediting 90% refund and restoring package seat inventory.
+3. **Interactive Visual Analytics:** Extracts live relational database records using Pandas/NumPy to plot seasonal demand trajectories, destination popularity, and category revenue contributions.
 
 ---
 
-### 3. Deploying 24/7 Free Live Website (Streamlit Community Cloud)
-1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with your GitHub account (`kishork6757`).
-2. Click **Create app** -> **I already have an app**.
-3. Select your repository: `kishork6757/Travel-Agency-Booking-System-25IT3A`.
-4. Set Main file path: `app.py`.
-5. Click **Deploy!** — Within 60 seconds, your site is live with a permanent, shareable 24/7 public URL (e.g. `https://travel-agency-25it3a.streamlit.app`).
+## 📂 Academic Deliverables & Live Links
 
----
+All deliverables specified in the assessment guidelines are version-controlled and accessible via the links below:
 
-### 4. Running the Java Application
+### 1. Software Engineering (Course: 25ITT33)
+* [📄 Software Requirements Specification (docs/SRS.md)](docs/SRS.md) — Problem analysis, Functional & Non-Functional requirements, User Personas, COCOMO estimation, and LOC metrics.
+* [📊 System Design & UML Diagrams (docs/DESIGN.md)](docs/DESIGN.md) — 3-Tier System Architecture, Use Case Diagram, Class Diagram, and Sequence Diagram in Mermaid.
+* [🧪 Testing Documentation (docs/TESTING.md)](docs/TESTING.md) — Boundary Value Analysis (BVA), Equivalence Class Partitioning (ECP), and 15 executed test cases with expected vs. actual outcomes.
 
-#### Option A: 1-Click Batch Execution (Windows)
-Double-click `run_java.bat` in the project root folder.
+### 2. Database Management Systems (Course: 25ITT31)
+* [🗺️ Entity-Relationship Diagram (database/ER_DIAGRAM.md)](database/ER_DIAGRAM.md) — ER diagram, cardinalities, primary/foreign key mappings.
+* [📐 Database Normalization (database/NORMALIZATION.md)](database/NORMALIZATION.md) — Step-by-step 1NF, 2NF, 3NF, and BCNF functional dependency derivations.
+* [💾 SQLite DDL Schema (database/schema_sqlite.sql)](database/schema_sqlite.sql) — Normalized tables, CHECK constraints, triggers, and views.
+* [🐬 MySQL DDL Schema (database/schema_mysql.sql)](database/schema_mysql.sql) — Production MySQL schema with stored procedures and triggers.
+* [🌱 Seed Dataset (database/seed_data.sql)](database/seed_data.sql) — Realistic dataset with 12 customers, 8 tour packages, and 29 bookings.
+* [🗄️ SQLite Database File (database/travel_agency.db)](database/travel_agency.db) — Pre-populated, verified relational database file.
 
-#### Option B: Command Line (PowerShell / Terminal)
-```powershell
-# 1. Navigate to the project directory
-cd e:\Assingment_Kishor
+### 3. Java Programming (Course: 25ITT32)
+* [☕ Java Source Code (src/com/travel/)](src/com/travel/) — Layered OOP design:
+  * Models: [`Customer.java`](src/com/travel/model/Customer.java), [`TravelPackage.java`](src/com/travel/model/TravelPackage.java), [`Booking.java`](src/com/travel/model/Booking.java), [`Payment.java`](src/com/travel/model/Payment.java), [`Cancellation.java`](src/com/travel/model/Cancellation.java)
+  * Data Access Layer: [`CustomerDAO.java`](src/com/travel/dao/CustomerDAO.java), [`PackageDAO.java`](src/com/travel/dao/PackageDAO.java), [`BookingDAO.java`](src/com/travel/dao/BookingDAO.java), [`PaymentDAO.java`](src/com/travel/dao/PaymentDAO.java), [`ReportDAO.java`](src/com/travel/dao/ReportDAO.java)
+  * Service Layer: [`BookingService.java`](src/com/travel/service/BookingService.java), [`PackageService.java`](src/com/travel/service/PackageService.java), [`CustomerService.java`](src/com/travel/service/CustomerService.java)
+  * Exceptions: [`CapacityExceededException.java`](src/com/travel/exception/CapacityExceededException.java), [`BookingNotFoundException.java`](src/com/travel/exception/BookingNotFoundException.java)
+  * Main Application: [`Main.java`](src/com/travel/Main.java) (Interactive console CLI menu)
+  * Automated Java Tests: [`SystemTestRunner.java`](src/com/travel/test/SystemTestRunner.java) (9/9 automated tests passing)
+* [📋 Verified Sample Output (sample_outputs/execution_log.txt)](sample_outputs/execution_log.txt) — Recorded CLI execution proving booking, reporting, and anti-overbooking rejection.
 
-# 2. Compile Java source files into the bin directory
-javac -cp "lib/*" -d bin src/com/travel/model/*.java src/com/travel/exception/*.java src/com/travel/util/*.java src/com/travel/dao/*.java src/com/travel/service/*.java src/com/travel/Main.java
-
-# 3. Launch the interactive application
-java -cp "bin;lib/*" com.travel.Main
-```
-
----
-
-### 3. Running the Python Analytics & Generating Visualizations
-
-#### Option A: 1-Click Batch Execution (Windows)
-Double-click `run_python.bat` in the project root folder.
-
-#### Option B: Command Line
-```powershell
-# 1. Install required Python packages (if not already installed)
-pip install -r analytics/requirements.txt
-
-# 2. Execute the analytics pipeline
-python analytics/tourism_trend_analysis.py
-```
-*Generated plots will be automatically refreshed and saved to the `visualizations/` folder.*
-
----
-
-### 4. Running the Jupyter Notebook
-```powershell
-jupyter notebook analytics/tourism_trend_analysis.ipynb
-```
-
----
-
-### 5. Database Setup (Optional for MySQL)
-The project comes pre-configured with a live SQLite database (`database/travel_agency.db`) requiring **zero configuration**.
-
-If you wish to deploy on **MySQL Server / XAMPP**:
-1. Open MySQL Workbench or phpMyAdmin.
-2. Execute `database/schema_mysql.sql` to generate tables, views, and stored procedures.
-3. Execute `database/seed_data.sql` to populate initial records.
-
----
-
-## 🛡️ Anti-Overbooking Protection: How It Works
-
-The system enforces capacity limits at two distinct layers:
-1. **Application Service Layer (`BookingService.java`):**
-   ```java
-   int remainingCapacity = packageDAO.getRemainingCapacity(packageId);
-   if (numTravelers > remainingCapacity) {
-       throw new CapacityExceededException(String.format(
-           "Booking Rejected: Requested %d seats, but only %d seats are available for '%s' (Capacity: %d).",
-           numTravelers, remainingCapacity, pkg.getDestination(), pkg.getMaxCapacity()
-       ));
-   }
-   ```
-2. **Database Engine Layer (`schema_sqlite.sql`):**
-   An automated SQL Trigger (`trg_prevent_overbooking`) halts and aborts any `INSERT` on `bookings` if the sum of confirmed travelers would exceed `max_capacity`.
+### 4. Foundations of Data Science (Course: 25ITC31)
+* [🐍 Python Data Analytics Script (analytics/tourism_trend_analysis.py)](analytics/tourism_trend_analysis.py) — Automated DB extraction, data cleaning, and chart generation.
+* [📓 Jupyter Notebook (analytics/tourism_trend_analysis.ipynb)](analytics/tourism_trend_analysis.ipynb) — Interactive step-by-step exploratory data analysis.
+* [📦 Python Dependencies (requirements.txt)](requirements.txt) — Project packages (Streamlit, Flask, Pandas, Plotly, Seaborn).
 
 ---
 
 ## 📊 Visualizations Gallery
 
-| Chart Preview | Analysis Description |
+The Python data pipeline generates 6 publication-ready charts reflecting seasonal demand and revenue patterns:
+
+| Visualization | Description |
 | :--- | :--- |
-| **`01_destination_popularity.png`** | Ranks tourist destinations by confirmed traveler headcount to identify high-demand locations (e.g. Goa, Dubai). |
-| **`02_monthly_booking_trends.png`** | Visualizes seasonal tourist spikes across summer vacation (April–May) and winter holidays (December–January). |
-| **`03_revenue_by_category.png`** | Donut chart displaying revenue contributions across International, Luxury, Domestic, Adventure, and Pilgrimage packages. |
-| **`04_booking_status_distribution.png`** | Demonstrates operational health by analyzing the ratio of Confirmed, Completed, and Cancelled bookings. |
-| **`05_traveler_group_size_distribution.png`** | Histogram and KDE curve illustrating party size distributions (identifying couple vs. family travel segments). |
-| **`06_package_occupancy_heatmap.png`** | Correlation matrix examining the relationship between package duration, unit price, capacity, and gross revenue. |
+| ![Destination Popularity](visualizations/01_destination_popularity.png) | **Destination Popularity:** Ranks tourist locations by confirmed traveler headcount. |
+| ![Monthly Trends](visualizations/02_monthly_booking_trends.png) | **Seasonal Demand Curve:** Tracks monthly booking volume across summer and winter spikes. |
+| ![Revenue by Category](visualizations/03_revenue_by_category.png) | **Category Revenue Share:** Donut chart breakdown across Luxury, International, Domestic, and Adventure. |
+| ![Booking Outcomes](visualizations/04_booking_status_distribution.png) | **Booking Outcomes:** Visualizes the ratio of Confirmed, Completed, and Cancelled trips. |
+| ![Party Size Distribution](visualizations/05_traveler_group_size_distribution.png) | **Party Size Distribution:** Histogram & KDE modeling traveler group sizes. |
+| ![Occupancy Heatmap](visualizations/06_package_occupancy_heatmap.png) | **Correlation Heatmap:** Matrix correlating duration, price, capacity, and gross revenue. |
 
 ---
 
-## 🧪 Testing Summary
+## 🛠️ Technology Stack
 
-* **Testing Strategy:** Black-Box (Equivalence Partitioning, Boundary Value Analysis), White-Box Path Coverage, and Integration Testing.
-* **Total Test Cases Executed:** 15
-* **Results:** 15 Passed / 0 Failed (100% Pass Rate).
-* *Refer to [`docs/TESTING.md`](docs/TESTING.md) for the full test cases specification table.*
+```text
+Frontend:   HTML5 | Tailwind CSS | FontAwesome 6 | Chart.js 4 | Streamlit
+Backend:    Java 17/21 (JDBC, OOP) | Python 3.11 (Flask REST API, Pandas, NumPy)
+Database:   SQLite 3 (Default Embedded) | MySQL 8.0 (Enterprise Ready)
+Analytics:  Matplotlib | Seaborn | Plotly Express | Jupyter Notebook
+DevOps:     Git | GitHub | Windows Batch Scripts (.bat)
+```
 
 ---
 
-## 📜 Academic Integrity and Certification
-I hereby certify that this project represents my original work developed for the **Project-Based Assessment Activity** in the Department of Information Technology at **Velalar College of Engineering and Technology**.
+## 🚀 Execution Instructions
+
+### Option 1: Modern Full-Stack Web Portal (Flask + Tailwind)
+Double-click [`run_fullstack.bat`](run_fullstack.bat) or run:
+```powershell
+python server.py
+```
+*Opens automatically in your browser at `http://127.0.0.1:5000`.*
+
+---
+
+### Option 2: Cloud-Ready Web Portal (Streamlit + Plotly)
+Double-click [`run_website.bat`](run_website.bat) or run:
+```powershell
+streamlit run app.py
+```
+*Opens automatically in your browser at `http://localhost:8501`.*
+
+---
+
+### Option 3: Java Console Application
+Double-click [`run_java.bat`](run_java.bat) or run:
+```powershell
+# Compile Java source files
+javac -cp "lib/*" -d bin src/com/travel/model/*.java src/com/travel/exception/*.java src/com/travel/util/*.java src/com/travel/dao/*.java src/com/travel/service/*.java src/com/travel/Main.java
+
+# Launch Application
+java -cp "bin;lib/*" com.travel.Main
+```
+
+---
+
+### Option 4: Python Analytics Script
+Double-click [`run_python.bat`](run_python.bat) or run:
+```powershell
+python analytics/tourism_trend_analysis.py
+```
+
+---
+
+## ☁️ 24/7 Cloud Deployment Guide (Streamlit Community Cloud)
+
+1. Navigate to **[share.streamlit.io](https://share.streamlit.io)** and log in with GitHub (`kishork6757`).
+2. Click **Create app** and configure:
+   * **Repository:** `kishork6757/Travel-Agency-Booking-System-25IT3A`
+   * **Branch:** `main`
+   * **Main file path:** `app.py`
+3. Click **Deploy!** — The application goes live with a permanent 24/7 public URL.
+
+---
+
+## 🧪 Automated Testing Summary
+
+An automated test suite validates all 31 critical subsystem rules:
+
+```text
+===========================================================================
+DATABASE INTEGRITY & RELATIONAL INTEGRITY : 8/8 Tests Passed (100%)
+FLASK RESTful API & CAPACITY SAFEGUARDS   : 8/8 Tests Passed (100%)
+DATA SCIENCE CHARTS & PIPELINE            : 6/6 Tests Passed (100%)
+JAVA OOP & ANTI-OVERBOOKING CHECKS        : 9/9 Tests Passed (100%)
+===========================================================================
+TOTAL TESTS EVALUATED: 31 | PASSED: 31 | FAILED: 0 | SUCCESS RATE: 100%
+```
+
+To run the automated test suite locally:
+```powershell
+python test_full_system.py
+```
+
+---
+
+## 📜 Academic Integrity Declaration
+
+I hereby confirm that this project and all accompanying code, database schemas, and documentation represent my original work developed for the **Project-Based Assessment Activity** in the Department of Information Technology at **Velalar College of Engineering and Technology**.
 
 * **Kishor K** (Register No: 732925ITR051)  
-* Class: 25IT3A
+* Class: **25IT3A**
